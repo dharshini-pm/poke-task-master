@@ -1,0 +1,138 @@
+ body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.gradient-bg {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+h2 {
+  color: #333;
+}
+
+.yellow-btn {
+  background-color: #ffd700;
+  color: black;
+  padding: 10px 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.task {
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  background-color: #fff7e6;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.card-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.reward-card {
+  background: white;
+  margin: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 150px;
+  text-align: center;
+}
+
+.reward-card img {
+  width: 80px;
+  height: 80px;
+}
+
+.pokemon-image {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+}
+
+.pokemon-list button {
+  margin: 10px;
+  padding: 10px 14px;
+  background-color: #e0f7ff;
+  border: 2px solid #00bcd4;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 300px;
+  margin: 100px auto;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-box a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+
+
+
+
+
+

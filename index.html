@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon Task Master</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body class="gradient-bg">
+  <div class="header">
+    <span id="welcomeUser"></span>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <div id="pokemonPage">
+    <h2>Choose Your Pokémon Buddy</h2>
+    <div class="pokemon-list" id="pokemonList"></div>
+  </div>
+
+  <div id="taskPage" style="display:none;">
+    <h2 id="pokemonNameHeading"></h2>
+    <img id="pokemonImage" src="" alt="Selected Pokémon" class="pokemon-image" />
+    <button onclick="changePokemon()" class="yellow-btn">🔄 Change Pokémon</button>
+
+    <h2>Create a New Task</h2>
+    <input type="text" id="taskInput" placeholder="Task name" />
+    <input type="date" id="taskDate" />
+    <input type="time" id="taskTime" />
+    <button onclick="addTask()" class="yellow-btn">Add Task</button>
+
+    <h2>Your Tasks</h2>
+    <div id="taskList"></div>
+
+    <h2>📊 Task Statistics</h2>
+    <div id="stats"></div>
+
+    <button onclick="location.href='stats.html'" class="yellow-btn">☑️ View Graphical Stats</button>
+
+    <h2>🎁 Pokémon Card Rewards</h2>
+    <div id="rewardGallery" class="card-gallery"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

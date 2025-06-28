@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Graphical Stats - Pokémon Task Master</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="gradient-bg">
+  <h2>📊 Graphical Task Statistics</h2>
+  <canvas id="taskChart" width="400" height="200"></canvas>
+  <br>
+  <button onclick="history.back()" class="yellow-btn">⬅️ Back</button>
+
+  <script>
+    const user = localStorage.getItem("loggedInUser");
+    const tasks = JSON.parse(localStorage.getItem(`${user}_tasks`) || "[]");
+    const completed = tasks.filter(t => t.completed).length;
+    const pending = tasks.length - completed;
+
+    const ctx = document.getElementById('taskChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Completed', 'Pending'],
+        datasets: [{
+          data: [completed, pending],
+          backgroundColor: ['#4CAF50', '#FF9800'],
+          borderColor: ['#388E3C', '#F57C00'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
